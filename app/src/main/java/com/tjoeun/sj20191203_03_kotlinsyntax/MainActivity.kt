@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.tjoeun.sj20191203_03_kotlinsyntax.datas.User
 
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,11 +47,36 @@ class MainActivity : AppCompatActivity() {
         userList.add(user2)
 
         val user3 = User()
-        user3.name = "썸원"
-        user2.loginId = "stuent2"
+        user3.name = "김미현"
+        user3.loginId = "stuent2"
         userList.add(user3)
 
-        Log.d("들어있는 사람수 ", "${userList.size} ")
+        val user4 = User()
+        user4.name = "Someone else"
+        user4.loginId = "stuent3"
+        userList.add(user4)
+
+        Log.d("들어있는 사람수 ", "${userList.size} 명")
+        var count = 0
+
+//        //몇번이나 돌아야할지 모를때 사용하는 while
+//        while (true){
+//            count++
+//            if(count >= 10){
+//                break
+//            }
+//        }
+
+        //코틀린에서는 JAVA의 for each 와 비슷한 문법이 기본.
+
+        for (user in userList)
+            Log.d("사람이름/아이디 : " , "${user.name}/ ${user.loginId}")
+
+        val endnum = 5
+        for (i in 0..endnum)
+            Log.d("뽑신 숫자 : " , "${i}")
+            Log.d("뽑는 배열 크기 : " , "${endnum}")
+
 
     }
 }
