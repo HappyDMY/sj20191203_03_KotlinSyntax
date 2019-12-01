@@ -3,6 +3,7 @@ package com.tjoeun.sj20191203_03_kotlinsyntax
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.tjoeun.sj20191203_03_kotlinsyntax.datas.User
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,6 +31,26 @@ class MainActivity : AppCompatActivity() {
         lottoNumArr.removeAt(0)
 
 
+
+
+        val userList = ArrayList<User>()
+
+        val user1: User = User()
+        user1.name = "조경진"
+        user1.loginId = "teacher"
+        userList.add(user1)
+
+        val user2 = User()
+        user2.name = "계석준"
+        user2.loginId = "stuent1"
+        userList.add(user2)
+
+        val user3 = User()
+        user3.name = "썸원"
+        user2.loginId = "stuent2"
+        userList.add(user3)
+
+        Log.d("들어있는 사람수 ", "${userList.size} ")
 
     }
 }
