@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         lottoNumArr.add(10)
         lottoNumArr.add(42)
+        lottoNumArr.add(42)
         lottoNumArr.add(0,15)
         lottoNumArr.add(17)
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("로또넘버 목록", "${lottoNumArr.toString()}")
         Log.d("42의 인덱스", "${lottoNumArr.indexOf(42)}")
         Log.d("1번칸에는 뭐가 있을까용???", "${lottoNumArr.get(1)}")
+//        Log.d("1001번칸에는 뭐가 있을까용???", "${lottoNumArr.get(1001)}")// IndexOutOfBoundsException
         //42를 뺴고 싶을때
         lottoNumArr.remove(42)
         //45를 뺴고 싶을때
@@ -56,6 +58,22 @@ class MainActivity : AppCompatActivity() {
         user4.loginId = "stuent3"
         userList.add(user4)
 
+        val user5 = User()
+        user5.name = "Someone else"
+        user5.loginId = "stuent3"
+        userList.add(user5)
+
+        Log.d("4.name == 5.name", (user4.name==user5.name).toString())
+        Log.d("4.name === 5.name", (user4.name===user5.name).toString())
+        Log.d("4.name == Someone else", (user4.name=="\"Someone else\"").toString())
+        Log.d("4.name === Someone else", (user4.name==="\"Someone else\"").toString())
+
+
+
+        Log.d("user3 있는 위치", "${userList.indexOf(user3)}")
+        Log.d("getTest 위치5 의 값은", "${userList.get(5)}")
+
+
         Log.d("들어있는 사람수 ", "${userList.size} 명")
         var count = 0
 
@@ -78,7 +96,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("뽑는 배열 크기 : " , "${endnum}")
 
 
-        val user5:User? = null
+        val userNullTest:User? = null
         val user6:Any?
         val user7 = null
 
