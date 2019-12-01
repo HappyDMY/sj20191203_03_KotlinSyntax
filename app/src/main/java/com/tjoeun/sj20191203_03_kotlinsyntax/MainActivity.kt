@@ -78,5 +78,12 @@ class MainActivity : AppCompatActivity() {
             Log.d("뽑는 배열 크기 : " , "${endnum}")
 
 
+        val user5:User? = null
+        val user6:Any?
+        val user7 = null
+
+
+
+
     }
 }
